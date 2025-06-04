@@ -5,11 +5,13 @@
 a:not(.button), a:not(.button):hover, a:not(.button):focus, a:not(.button):visited, i, em{
     color: inherit;
 }
-.Titulo1{
+textP1{
+
     margin-left: 100px;
+    text-align: center;
 }
 .imagen1{
-    max-width: 100%;
+    max-width: 50%;
     height: auto;
     box-sizing: border-box;
 }
