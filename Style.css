@@ -1,8 +1,8 @@
 body {
-  background-color: #3e6b3c;
+  background-color: #e9cb8f;
 }
 header {
-  background: #4b2e1e;
+  background: #264d2c;
   width: 100%;
   clear: both;
   content: "";
@@ -29,7 +29,7 @@ header {
 }
 .fila-prin h1 {
   margin: 0 20px;
-  color: white;
+  color: #8b5e3c;
   font-size: 3rem;
   flex: 1;
   text-align: center;
