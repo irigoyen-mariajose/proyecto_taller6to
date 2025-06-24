@@ -1,6 +1,18 @@
 body {
   background-color: #e9cb8f;
 }
+.contenedor {
+  height: 100vh;
+  width: 100vw;
+  max-width: 100%;
+  margin: 0%;
+  padding: 0%;
+  display: grid;
+  grid-gap: 15px;
+  justify-items: center;
+  padding-top: 70px;
+}
+
 header {
   background: #264d2c;
   width: 100%;
@@ -12,21 +24,21 @@ header {
   top: 0;
   left: 0;
 }
-
+/*aca va todo el css de la barra  */
 .fila-prin {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  max-width: 1000px;
+  width: 80%;
   margin: 0 auto;
-  padding: 10px 20px;
-  gap: 80px;
 }
 
 .img-logo {
-  width: 150px;
-  height: auto;
+  width: 180px;
+  height: 130px;
+  float: left;
+  padding: 6px;
+  margin-left: 0;
+  border-radius: 60px;
 }
+
 .fila-prin h1 {
   margin: 0 20px;
   color: #8b5e3c;
@@ -38,60 +50,50 @@ header {
 nav {
   float: right;
   color: beige;
-}
-nav ul {
-  display: flex;
-  margin: 0;
-  padding: 0;
-  gap: 20px;
+  align-items: center;
+  flex-grow: 2;
+  text-align: center;
+  margin-left: 100px;
 }
 
 nav ul li {
   list-style: none;
-  margin-left: 20px;
-  padding: 0;
+  float: left;
+  position: relative;
+  margin-left: 30px;
+  padding: 8px 0;
+  display: flex;
 }
 
 nav ul li a {
   text-decoration: none;
   color: white;
   font-weight: bold;
+  font-size: 20px;
+  text-align: center;
 }
-.matesdiponibles {
+/* aca arranca el css de las imagenes del index*/
+.mates-disp {
   display: grid;
-  width: 90%;
+  width: 100%;
   gap: 3em;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
 }
-.Promocion1 {
-  display: block;
+.subtitulo2 {
+  color: #264d2c;
+  text-align: center;
 }
-a:not(.button),
-a:not(.button):hover,
-a:not(.button):focus,
-a:not(.button):visited,
-i,
-em {
-  color: inherit;
-}
-
-.imagen1 {
-  max-width: 50%;
-  height: auto;
-  box-sizing: border-box;
-}
-.mate1 {
-  height: 300px;
+.mate2 {
   width: 300px;
-  background-color: rgb(150, 199, 199);
-}
-
-.img-ropa {
   height: 300px;
-  width: 300px;
+  margin: 5%;
+  background-color: yellowgreen;
 }
-
+.img_index {
+  width: 300px;
+  height: 300px;
+}
 .precios {
-  color: aliceblue;
+  color: #264d2c;
   text-align: center;
 }
