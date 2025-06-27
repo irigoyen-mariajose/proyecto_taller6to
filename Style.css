@@ -83,7 +83,65 @@ nav ul li a {
   font-size: 20px;
   text-align: center;
 }
-/* aca arranca el css de las imagenes del index*/
+/* imagenes y animacion del inicio */
+.slider {
+  width: 100%;
+  height: 60vh;
+  overflow: hidden;
+  position: relative;
+  margin: 0;
+  padding: 0;
+  margin-top: 100px;
+}
+
+.slider-css {
+  position: relative;
+  width: 100%;
+  height: 70vh;
+  overflow: hidden;
+  margin-top: 100px;
+}
+
+.slide {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  animation: fade 9s infinite;
+}
+
+.slide:nth-child(1) {
+  animation-delay: 0s;
+}
+.slide:nth-child(2) {
+  animation-delay: 3s;
+}
+.slide:nth-child(3) {
+  animation-delay: 6s;
+}
+
+@keyframes fade {
+  0% {
+    opacity: 1;
+  }
+  33.33% {
+    opacity: 1;
+  }
+  33.34% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* aca arranca el css de las imagenes del index de nuevos inmgresos*/
 .mates-disp {
   display: grid;
   width: 100%;
@@ -98,6 +156,7 @@ nav ul li a {
   width: 300px;
   height: 300px;
   margin: 5%;
+  text-align: center;
 }
 .img_index {
   width: 300px;
@@ -108,4 +167,20 @@ nav ul li a {
 .precios {
   color: #264d2c;
   text-align: center;
+  margin-top: 2px;
+  font-size: 17px;
+  font-weight: bold;
+  color: #333;
+}
+.titulo_categoria {
+  font-family: "Gurajada", serif;
+  margin: 0;
+  color: #8b5e3c;
+  font-size: 3rem;
+  flex: 1;
+  text-align: center;
+  font-family: "Gurajada", serif;
+  position: absolute;
+  top: 0;
+  left: 43%;
 }
