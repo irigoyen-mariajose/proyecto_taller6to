@@ -5,10 +5,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Categorias</title>
     <link rel="stylesheet" href="Style.css" />
-    <link rel="stylesheet" href="index.html">
+    
   </head>
   <body>
-     <div class="contenedor">
+
+   <!-- Ícono hamburguesa -->
+<div class="hamburger" id="hamburger">
+  <div></div>
+  <div></div>
+  <div></div>
+</div>
+
+<!-- Menú lateral -->
+<nav class="side-menu" id="sideMenu">
+  <ul>
+    <li><a href="mates.html">Mates</a> </li> 
+    <li><a href="Yerbas.html">Yerbas</a></li> 
+    <li><a href="Termos.html">Termos</a></li>
+    <li><a href="Acesorios.html">Acesorios</a></li> 
+  </ul>
+</nav>
+
+<!-- Fondo oscuro -->
+<div class="overlay" id="overlay"></div>
+
       <header>
         <div class="fila-prin">
           <img class="img-logo" src="Imagenes/logo_matezen.jpeg" alt="logo" />
@@ -20,23 +40,42 @@
             </ul>
           </nav>
         </div>
+     
       </header>
+       
 
     <div class="page-content">
             <div class="promo">
                 <h3 class="titulo">Mates</h3>
-                <img class="imagen" src="Imagenes/of11-copia1-36496d34f7124b857915900032676972-640-0.jpg" alt="combo1">
+                <img class="imagen" src="" alt="combo1">
                 <pre class="precios-promo" dir="ltr"> $40.000</pre>
             </div>
             <div class="promo">
                 <h3 class="titulo"></h3>
-               <img class="imagen" src="Imagenes/mateAnimalPrint.webp" alt="">
+               <img class="imagen" src="" alt="">
                 <pre class="precios-promo" dir="ltr"> $400.000</pre>
             </div>
             <div class="promo">
                 <h3 class="titulo">Bermuda y Chomba </h3>
-                <img class="imagen" src="Imagenes/mateImperial.webp" alt="combo1">
+                <img class="imagen" src="" alt="combo1">
                 <pre class="precios-promo" dir="ltr"> $40.000</pre>
             </div>
+
+      
+  <script>
+  const hamburger = document.getElementById('hamburger');
+  const sideMenu = document.getElementById('sideMenu');
+  const overlay = document.getElementById('overlay');
+
+  hamburger.addEventListener('click', () => {
+    sideMenu.classList.add('active');
+    overlay.classList.add('active');
+  });
+
+  overlay.addEventListener('click', () => {
+    sideMenu.classList.remove('active');
+    overlay.classList.remove('active');
+  });
+</script>
   </body>
 </html>
