@@ -5,77 +5,63 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Categorias</title>
     <link rel="stylesheet" href="Style.css" />
-    
   </head>
   <body>
+    <div class="contenedor">
+      <div class="hamburger" id="hamburger">
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
 
-   <!-- Ícono hamburguesa -->
-<div class="hamburger" id="hamburger">
-  <div></div>
-  <div></div>
-  <div></div>
-</div>
+      <nav class="side-menu" id="sideMenu">
+        <ul>
+          <li><a href="mates.html">Mates</a></li>
+          <li><a href="Yerbas.html">Yerbas</a></li>
+          <li><a href="Termos.html">Termos</a></li>
+          <li><a href="Acesorios.html">Acesorios</a></li>
+        </ul>
+      </nav>
 
-<!-- Menú lateral -->
-<nav class="side-menu" id="sideMenu">
-  <ul>
-    <li><a href="mates.html">Mates</a> </li> 
-    <li><a href="Yerbas.html">Yerbas</a></li> 
-    <li><a href="Termos.html">Termos</a></li>
-    <li><a href="Acesorios.html">Acesorios</a></li> 
-  </ul>
-</nav>
-
-<!-- Fondo oscuro -->
-<div class="overlay" id="overlay"></div>
+      <div class="overlay" id="overlay"></div>
 
       <header>
         <div class="fila-prin">
           <img class="img-logo" src="Imagenes/logo_matezen.jpeg" alt="logo" />
-          <h1 class="titulo_categoria">MATEZEN</h1>
+          <h1>MATEZEN</h1>
           <nav>
             <ul>
-              <li><a href="index.html">Pagina Principal</a></li>
+              <li><a href="index.html">Pagina principal</a></li>
               <li><a href="iniciarSesion.html">Iniciar Sesion</a></li>
             </ul>
-          </nav>
+          </nav>  
         </div>
-     
+        </div>
       </header>
-       
+      <nav>
+        <div>
+          <div class="subtitulo">
+            <h2 class="subtitulo2">Promos:</h2>
+            <p>Promos:</p>
+          </div>
+        </div>
+      </nav>
+     
+      <script>
+        const hamburger = document.getElementById("hamburger");
+        const sideMenu = document.getElementById("sideMenu");
+        const overlay = document.getElementById("overlay");
 
-    <div class="page-content">
-            <div class="promo">
-                <h3 class="titulo">Mates</h3>
-                <img class="imagen" src="" alt="combo1">
-                <pre class="precios-promo" dir="ltr"> $40.000</pre>
-            </div>
-            <div class="promo">
-                <h3 class="titulo"></h3>
-               <img class="imagen" src="" alt="">
-                <pre class="precios-promo" dir="ltr"> $400.000</pre>
-            </div>
-            <div class="promo">
-                <h3 class="titulo">Bermuda y Chomba </h3>
-                <img class="imagen" src="" alt="combo1">
-                <pre class="precios-promo" dir="ltr"> $40.000</pre>
-            </div>
+        hamburger.addEventListener("click", () => {
+          sideMenu.classList.add("active");
+          overlay.classList.add("active");
+        });
 
-      
-  <script>
-  const hamburger = document.getElementById('hamburger');
-  const sideMenu = document.getElementById('sideMenu');
-  const overlay = document.getElementById('overlay');
-
-  hamburger.addEventListener('click', () => {
-    sideMenu.classList.add('active');
-    overlay.classList.add('active');
-  });
-
-  overlay.addEventListener('click', () => {
-    sideMenu.classList.remove('active');
-    overlay.classList.remove('active');
-  });
-</script>
+        overlay.addEventListener("click", () => {
+          sideMenu.classList.remove("active");
+          overlay.classList.remove("active");
+        });
+      </script>
+    </div>
   </body>
 </html>
