@@ -192,7 +192,7 @@ nav ul li a {
 
 /* arranca el css de categorias y parte del menu funcional */
 .contenedor_cat {
-  height: 10vh;
+  height: 5vh;
   width: 100vw;
   max-width: 100%;
   margin: 0%;
@@ -278,7 +278,7 @@ nav ul li a {
 /* aca estaria lo de las imagenes de categoria con su descripcion*/
 .producto {
   display: flex;
-  gap: 30px;
+  gap: 50px;
   margin: 20px;
   padding-top: 20px;
 }
