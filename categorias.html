@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="Style.css" />
   </head>
   <body>
-    <div class="contenedor">
+    <div class="contenedor_cat">
       <div class="hamburger" id="hamburger">
         <div></div>
         <div></div>
@@ -38,14 +38,35 @@
         </div>
         </div>
       </header>
-      <nav>
-        <div>
-          <div class="subtitulo">
-            <h2 class="subtitulo2">Promos:</h2>
-            <p>Promos:</p>
-          </div>
-        </div>
-      </nav>
+      
+      
+<h1 class="titulo_promos">Promociones imperdibles</h1>
+
+      <div class="producto">
+  <div class="contenedor-img" onclick="toggleDescripcion(this)">
+    <img src="Imagenes/canasta_cuero1.webp" alt="Canasta">
+    <div class="descripcion">
+      <h3>Canasta Cuero Vacuno</h3>
+      <p>Esta canasta matera está hecha con cuero 100% vacuno, ideal para transportar tu mate a todos lados.</p>
+      <strong>Precio: $49.990</strong>
+    </div>
+  </div>
+<br>
+   <div class="contenedor-img" onclick="toggleDescripcion(this)">
+    <img src="Imagenes/canasta_cuero3.webp" alt="Canasta">
+    <div class="descripcion">
+      <h3>Set Matero</h3>
+      <p>Este set matero cuenta con una canasta de cuero, un mate de algarrobo y una yerbera forrada del m ismo cuero.</p>
+      <strong>Precio: $79.990</strong>
+    </div>
+  </div>
+  </div>
+
+  <script>
+  function toggleDescripcion(elemento) {
+    elemento.classList.toggle('activo');
+  }
+</script>
      
       <script>
         const hamburger = document.getElementById("hamburger");
