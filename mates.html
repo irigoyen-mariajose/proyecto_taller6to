@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cat - Mates</title>
+    <link rel="stylesheet" href="Style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Gurajada&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="contenedor">
+      <header>
+        <div class="fila-prin">
+          <img class="img-logo" src="Imagenes/logo_matezen.jpeg" alt="logo" />
+          <h1>MATEZEN</h1>
+          <nav>
+            <ul>
+              <li><a href="categorias.html">Categorias</a></li>
+
+              <li><a href="index.html">Pagina Principal</a></li>
+            </ul>
+          </nav>
+        </div>
+      </header>
+      <br />
+
+      <div class="mates">
+        <h1 class="titulo_mates">M A T E S</h1>
+        <div>
+          <h3 class="subtitulo_calabaza">Calabaza</h3>
+
+          <div class="slider-container">
+            <button class="arrow left" onclick="moveLeft()">←</button>
+
+            <div class="slider">
+              <div class="image-track">
+                <img src="Imagenes/mate_calabaza4.webp" alt="Mate 1" />
+                <img src="Imagenes/mate_calabaza1.webp" alt="Mate 2" />
+                <img src="Imagenes/mate_caslabaza2.webp" alt="Mate 3" />
+                <img src="Imagenes/mate_calabaza3.webp" alt="Mate 4" />
+                <img src="Imagenes/mate_calabaza4.webp" alt="Mate 5" />
+                <img src="Imagenes/canasta_cuero3.webp" alt="Mate 6" />
+                <img src="Imagenes/canasta_cuero3.webp" alt="Mate 7" />
+                <img src="Imagenes/canasta_cuero3.webp" alt="Mate 8" />
+                <!-- Agregá las imágenes que quieras -->
+              </div>
+            </div>
+
+            <button class="arrow right" onclick="moveRight()">→</button>
+          </div>
+        </div>
+      </div>
+
+      <script>
+        let position = 0;
+
+        function moveRight() {
+          const track = document.querySelector(".image-track");
+          const totalImages = track.children.length;
+          const imagesPerView = 4;
+          const maxPosition = Math.ceil(totalImages / imagesPerView) - 1;
+
+          if (position < maxPosition) {
+            position++;
+            track.style.transform = `translateX(-${position * 100}%)`;
+          }
+        }
+
+        function moveLeft() {
+          const track = document.querySelector(".image-track");
+
+          if (position > 0) {
+            position--;
+            track.style.transform = `translateX(-${position * 100}%)`;
+          }
+        }
+      </script>
+    </div>
+  </body>
+</html>

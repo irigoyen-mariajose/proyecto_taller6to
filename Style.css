@@ -331,3 +331,75 @@ nav ul li a {
   text-align: center;
   color: #264d2c;
 }
+
+.contenedor2 {
+  height: 30%;
+}
+.oferta-mates {
+  text-align: center;
+  color: #8b5e3c;
+  font-size: 30px;
+}
+
+.boton_aprovechar {
+  text-align: center;
+  color: #96825a;
+  width: 780px;
+}
+.mates {
+  width: 100%;
+  height: 30%;
+  text-align: center;
+}
+.titulo_mates {
+  text-align: center;
+
+  font-size: 30px;
+  margin: 20px 0 15px 0;
+  padding: 0;
+}
+
+.subtitulo_calabaza {
+  text-align: center;
+
+  font-size: 20px;
+  margin: 0 0 px 0;
+  padding: 0;
+}
+
+.slider-container {
+  position: relative;
+  width: 100%;
+  margin: auto;
+  padding-top: 0%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.slider {
+  overflow: hidden;
+  width: 100%;
+}
+
+.image-track {
+  display: flex;
+  transition: transform 0.5s ease;
+}
+
+.image-track img {
+  width: 25%;
+  height: auto;
+  padding: 15px;
+  box-sizing: border-box;
+}
+
+.arrow {
+  background-color: #264d2c;
+  color: white;
+  border: none;
+  padding: 10px;
+  font-size: 20px;
+  cursor: pointer;
+  z-index: 1;
+}
