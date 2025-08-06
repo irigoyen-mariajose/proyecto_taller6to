@@ -261,6 +261,7 @@ nav ul li a {
   grid-gap: 15px;
   justify-items: center;
   padding-top: 140px;
+ 
 }
 .hamburger {
   position: fixed;
@@ -273,6 +274,7 @@ nav ul li a {
   justify-content: space-between;
   cursor: pointer;
   z-index: 1100;
+  
 }
 
 .hamburger div {
@@ -335,6 +337,22 @@ nav ul li a {
   font-size: 18px;
   padding: 8px 0;
 }
+@keyframes latido {
+  0%, 100% {
+    transform: scale(1);
+     box-shadow: 0 0 0px rgba(255, 255, 255, 0);
+  
+  }
+  50% {
+    transform: scale(1.10);
+    box-shadow: 0 0 35px brown
+  }
+}
+
+.hamburger {
+  animation: latido 1.0s ease-in-out infinite;
+}
+
 /* aca estaria lo de las imagenes de categoria con su descripcion*/
 .producto {
   display: flex;
