@@ -1,6 +1,66 @@
 body {
   background-color: #e9cb8f;
 }
+.yerbas-disp {
+  display: grid;
+  width: 100%;
+  gap: 3em;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+.termos-disp {
+  display: grid;
+  width: 100%;
+  gap: 3em;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+.accesorios-disp {
+  display: grid;
+  width: 100%;
+  gap: 3em;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+.accesorio {
+  width: 300px;
+  height: 300px;
+  margin: 5%;
+  text-align: center;
+  margin-bottom: 100px;
+}
+.termo {
+  width: 300px;
+  height: 300px;
+  margin: 5%;
+  text-align: center;
+  margin-bottom: 100px;
+}
+BotonCompraPromo{
+  margin-left: 5%;
+  margin-top: 10px;
+  padding: 15px 30px;
+  font-size: 18px;
+  background: green;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  display: flex;
+  margin-bottom: 10px;
+}
+.BotonCompra{
+      margin-left: 25%;
+      padding: 15px 30px;
+      font-size: 18px;
+      background: green;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      display: flex;
+      margin-bottom: 100px;
+}
+button:hover {
+      background: darkgreen;
+}
 .contenedor {
   height: 100vh;
   width: 100vw;
