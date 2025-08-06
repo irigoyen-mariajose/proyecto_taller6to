@@ -31,8 +31,7 @@
         <h1 class="titulo_mates">M A T E S</h1>
         <div>
           <h3 class="subtitulo_calabaza">Calabaza</h3>
-
-          <div class="slider-container">
+          <div class="slider-container" data-id="calabaza">
             <button class="arrow left" onclick="moveLeft()">←</button>
 
             <div class="slider">
@@ -48,67 +47,67 @@
                 
               </div>
             </div>
-            <button class="arrow right" onclick="moveRight()">→</button>
+            <button class="arrow right" onclick="moveRight('calabaza')">→</button>
           </div>
-        </div>
+          
+    
+      
 
 <div>
           <h3 class="subtitulo_calabaza">Madera</h3>
-
-          <div class="slider-container">
-            <button class="arrow left" onclick="moveLeft()">←</button>
-
+    <div class="slider-container" data-id="madera">
+     <button class="arrow left" onclick="moveLeft('madera')">←</button>
             <div class="slider">
               <div class="image-track">
-                <img src="Imagenes/mate_calabaza4.webp" alt="Mate 1" />
-                <img src="Imagenes/mate_calabaza1.webp" alt="Mate 2" />
-                <img src="Imagenes/mate_caslabaza2.webp" alt="Mate 3" />
-                <img src="Imagenes/mate_calabaza3.webp" alt="Mate 4" />
-                <img src="Imagenes/mate_calabaza4.webp" alt="Mate 5" />
-                <img src="Imagenes/canasta_cuero3.webp" alt="Mate 6" />
-                <img src="Imagenes/canasta_cuero3.webp" alt="Mate 7" />
-                <img src="Imagenes/canasta_cuero3.webp" alt="Mate 8" />
+                <img src="Imagenes/imagen_mateMadera1.webp" alt="Mate 1" />
+                <img src="Imagenes/mate_madera2.webp" alt="Mate 2" />
+                <img src="Imagenes/mate_madera3.webp" alt="Mate 3" />
+                <img src="Imagenes/mate_madera4.webp" alt="Mate 4" />
+                <img src="Imagenes/mate_madera5.webp" alt="Mate 5" />
+                <img src="Imagenes/mate_madera6.webp" alt="Mate 6" />
+                <img src="Imagenes/mate_madera7.webp" alt="Mate 7" />
+                <img src="Imagenes/mate_madera8.webp" alt="Mate 8" />
                 
               </div>
             </div>
-            <button class="arrow right" onclick="moveRight()">→</button>
+           <button class="arrow right" onclick="moveRight('madera')">→</button>
           </div>
         </div>
 
-
-
-
-
-
-
-
-
       </div>
 
-      <script>
-        let position = 0;
 
-        function moveRight() {
-          const track = document.querySelector(".image-track");
-          const totalImages = track.children.length;
-          const imagesPerView = 4;
-          const maxPosition = Math.ceil(totalImages / imagesPerView) - 1;
-
-          if (position < maxPosition) {
-            position++;
-            track.style.transform = `translateX(-${position * 100}%)`;
-          }
-        }
-
-        function moveLeft() {
-          const track = document.querySelector(".image-track");
-
-          if (position > 0) {
-            position--;
-            track.style.transform = `translateX(-${position * 100}%)`;
-          }
-        }
-      </script>
     </div>
+<script>
+  const positions = {};
+
+  function moveRight(id) {
+    const container = document.querySelector(`.slider-container[data-id="${id}"]`);
+    const track = container.querySelector(".image-track");
+    const totalImages = track.children.length;
+    const imagesPerView = 4;
+
+    if (!positions[id]) positions[id] = 0;
+
+    const maxPosition = Math.ceil(totalImages / imagesPerView) - 1;
+
+    if (positions[id] < maxPosition) {
+      positions[id]++;
+      track.style.transform = `translateX(-${positions[id] * 100}%)`;
+    }
+  }
+
+  function moveLeft(id) {
+    const container = document.querySelector(`.slider-container[data-id="${id}"]`);
+    const track = container.querySelector(".image-track");
+
+    if (!positions[id]) positions[id] = 0;
+
+    if (positions[id] > 0) {
+      positions[id]--;
+      track.style.transform = `translateX(-${positions[id] * 100}%)`;
+    }
+  }
+</script>
   </body>
 </html>

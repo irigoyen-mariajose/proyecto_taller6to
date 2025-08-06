@@ -351,6 +351,7 @@ nav ul li a {
   height: 30%;
   text-align: center;
 }
+/* empieza la seccion de la categoria mates*/ 
 .titulo_mates {
   text-align: center;
 
@@ -367,6 +368,7 @@ nav ul li a {
   padding: 0;
 }
 
+/*aca arrancar la parte que tiene animacion en la categoria de mates */
 .slider-container {
   position: relative;
   width: 100%;
@@ -388,10 +390,11 @@ nav ul li a {
 }
 
 .image-track img {
-  width: 25%;
-  height: auto;
-  padding: 15px;
-  box-sizing: border-box;
+  width: 24%;
+  aspect-ratio: 1 / 1;        
+  object-fit: cover;          
+  padding: 10px;
+
 }
 
 .arrow {
