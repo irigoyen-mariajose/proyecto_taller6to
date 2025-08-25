@@ -19,3 +19,18 @@ if (nombre === '' || email === '' || contraseña === '') {
 }
 
 mensajeExitoDiv.textContent = '¡Registro exitoso! Bienvenido a Matezen, ' + nombre + '.';
+fetch('http://localhost/guardar_datos.php', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/x-www-form-urlencoded', // o 'application/json' si el PHP lo espera así
+        },
+        body: new URLSearchParams(datosParaEnviar) // Convierte el objeto a un formato compatible
+    })
+    .then(response => response.json())
+    .then(data => {
+        console.log('Respuesta del servidor:', data);
+        // Puedes mostrar un mensaje al usuario o actualizar la interfaz
+    })
+    .catch(error => {
+        console.error('Error al enviar los datos:', error);
+    });
