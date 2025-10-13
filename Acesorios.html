@@ -11,10 +11,26 @@
     <title>tienda online de MATEZEN</title>
   </head>
   <body>
+    <div class="hamburger" id="hamburger">
+      <div></div><div></div><div></div>
+    </div>
+
+    <nav class="side-menu" id="sideMenu">
+      <ul>
+        <li><a href="mates.html">Mates</a></li>
+        <li><a href="Yerbas.html">Yerbas</a></li>
+        <li><a href="Termos.html">Termos</a></li>
+        <li><a href="Acesorios.html">Acesorios</a></li>
+      </ul>
+    </nav>
+    <div class="overlay" id="overlay"></div>
     <div class="contenedor">
       <header>
         <div class="fila-prin">
-          <img class="img-logo" src="Imagenes/logo_matezen.jpeg" alt="logo" />
+          <a href="index.html">
+  <img class="img-logo" src="Imagenes/logo_matezen.jpeg" alt="logo" />
+</a>
+          
           <h1>MATEZEN</h1>
           <nav>
             <ul>
@@ -29,7 +45,7 @@
 
       <div class="accesorios-disp">
         <div class="accesorio">
-          <img class="img_index" src="Imagenes/accesorioStanley.jfif" alt="" />
+          <img class="img_index" src="Imagenes/canasta_matera_nefasta.jpg" alt="" />
           <pre class="precios" dir="ltr">$80.000</pre>
           <button onclick="comprar()" class="BotonCompra">Comprar ahora</button>
         </div>
@@ -41,25 +57,25 @@
         </div>
 
         <div class="accesorio">
-          <img class="img_index" src="Imagenes/bombilla 1.webp" alt="" />
-          <pre class="precios" dir="ltr">$70.000</pre>
-          <button onclick="comprar()" class="BotonCompra">Comprar ahora</button>
-        </div>
-
-        <div class="accesorio">
-          <img class="img_index" src="Imagenes/accesorioLumilagro.webp" alt="" />
+          <img class="img_index" src="Imagenes/bombillas_2.jpg" alt="" />
           <pre class="precios" dir="ltr">$80.000</pre>
           <button onclick="comprar()" class="BotonCompra">Comprar ahora</button>
         </div>
 
         <div class="accesorio">
-          <img class="img_index" src="Imagenes/accesorioDiscovery.jfif" alt="" />
+          <img class="img_index" src="Imagenes/canasta_matera_2.webp" alt="" />
+          <pre class="precios" dir="ltr">$80.000</pre>
+          <button onclick="comprar()" class="BotonCompra">Comprar ahora</button>
+        </div>
+
+        <div class="accesorio">
+          <img class="img_index" src="Imagenes/bombilla_5.jpg" alt="" />
           <pre class="precios" dir="ltr">78.000</pre>
           <button onclick="comprar()" class="BotonCompra">Comprar ahora</button>
         </div>
         
         <div class="accesorio">
-          <img class="img_index" src="Imagenes/accesoriolar.jpg" alt="" />
+          <img class="img_index" src="Imagenes/bombillas_4.jpg" alt="" />
           <pre class="precios" dir="ltr">$64.000</pre>
           <button onclick="comprar()" class="BotonCompra">Comprar ahora</button>
         </div>
@@ -70,4 +86,21 @@
             alert("Aprovecahr")
             }
         </script>
+        </script>
+     
+      <script>
+        const hamburger = document.getElementById("hamburger");
+        const sideMenu = document.getElementById("sideMenu");
+        const overlay = document.getElementById("overlay");
+
+        hamburger.addEventListener("click", () => {
+          sideMenu.classList.add("active");
+          overlay.classList.add("active");
+        });
+
+        overlay.addEventListener("click", () => {
+          sideMenu.classList.remove("active");
+          overlay.classList.remove("active");
+        });
+      </script>
       </div>

@@ -11,6 +11,20 @@
     <title>tienda online de MATEZEN</title>
   </head>
   <body>
+
+    <div class="hamburger" id="hamburger">
+      <div></div><div></div><div></div>
+    </div>
+
+    <nav class="side-menu" id="sideMenu">
+      <ul>
+        <li><a href="mates.html">Mates</a></li>
+        <li><a href="Yerbas.html">Yerbas</a></li>
+        <li><a href="Termos.html">Termos</a></li>
+        <li><a href="Acesorios.html">Acesorios</a></li>
+      </ul>
+    </nav>
+    <div class="overlay" id="overlay"></div>
     <div class="contenedor">
       <header>
         <div class="fila-prin">
@@ -29,7 +43,6 @@
         <h1 class="oferta-mates">
           6 CUOTAS SIN INTERES + 20% OFF TRANSFERENCIA
         </h1>
-        <h3 class="boton_aprovechar">Aprovechar</h3>
         <button onclick="aprovechar()" class="boton_aprovechar">Aprovechar</button>
       </div>
 
@@ -90,7 +103,7 @@
           <button onclick="comprar()" class="BotonCompra">Comprar ahora</button>
         </div>
         <div class="mate2">
-          <img class="img_index" src="Imagenes/canasta_cuero1.webp" alt="" />
+          <img class="img_index" src=" Imagenes\canas_matera_cuero.jpg" alt="" />
           <pre class="precios" dir="ltr">$65.000</pre>
           <button onclick="comprar()" class="BotonCompra">Comprar ahora</button>
         </div>
@@ -101,8 +114,25 @@
         alert("Compra confirmada"); 
       }
       function aprovechar() {
-      alert("Aprovecahr")
+      alert("Aprovechar oferton")
       }
     </script>
+    </script>
+     
+      <script>
+        const hamburger = document.getElementById("hamburger");
+        const sideMenu = document.getElementById("sideMenu");
+        const overlay = document.getElementById("overlay");
+
+        hamburger.addEventListener("click", () => {
+          sideMenu.classList.add("active");
+          overlay.classList.add("active");
+        });
+
+        overlay.addEventListener("click", () => {
+          sideMenu.classList.remove("active");
+          overlay.classList.remove("active");
+        });
+      </script>
   </body>
 </html>
