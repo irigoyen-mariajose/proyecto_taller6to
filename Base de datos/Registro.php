@@ -2,6 +2,7 @@
 require_once 'Usuario.php';
 require_once 'Usuario.model.php';
 
+
 $error = '';
 $exito = '';
 
@@ -36,7 +37,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 <head>
     <meta charset="UTF-8">
     <title>Registro</title>
-    <link rel="stylesheet" href="Css/Registro.css">
+    <link rel="stylesheet" href="Index.css">
 </head>
 <body>
     <h1>Registro de Usuario</h1>
